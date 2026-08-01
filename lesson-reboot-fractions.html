@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cy Lesson: Reboot + Fractions</title>
+<style>
+:root{--bg:#eef5ff;--card:#fff;--ink:#17324d;--muted:#607286;--blue:#2f80ed;--green:#27ae60;--gold:#f2c94c;--orange:#f2994a;--line:#d8e4f0;--shadow:0 10px 28px rgba(23,50,77,.12)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(145deg,#eaf4ff,#fff8e7);color:var(--ink);padding-bottom:92px}button,input,textarea{font:inherit}header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 14px}.top{max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.brand h1{font-size:1.05rem;margin:0}.brand div{font-size:.78rem;color:var(--muted)}.timer{font-weight:900;background:#eef6ff;border:1px solid #cfe1f7;padding:9px 12px;border-radius:14px;min-width:72px;text-align:center}main{max-width:760px;margin:auto;padding:14px}.progress{height:10px;background:#dfeaf5;border-radius:99px;overflow:hidden;margin:4px 0 14px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));width:0}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}.kicker{font-size:.76rem;font-weight:900;color:#1d67b1;text-transform:uppercase;letter-spacing:.07em}.card h2{font-size:1.35rem;margin:5px 0 8px}.directions{color:var(--muted);line-height:1.45}.agenda{display:grid;gap:9px}.agendaItem{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:16px;background:#fbfdff}.agendaItem .icon{font-size:1.4rem;text-align:center}.agendaItem strong{display:block}.agendaItem small{color:var(--muted)}.time{font-weight:900;color:#1d67b1}.task{border:1px solid var(--line);border-radius:18px;padding:14px;margin:11px 0;background:#fbfdff}.task b{display:block;margin-bottom:8px}.answer{width:100%;min-height:50px;border:1px solid #bfcfe0;border-radius:14px;padding:12px;background:#fff}.choiceGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{min-height:50px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:800;color:var(--ink)}.choice.selected{background:#eaf8ee;border-color:#6fc68a;box-shadow:inset 0 0 0 2px #6fc68a}.model{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:12px 0}.piece{height:34px;border:1px solid #aec0d3;border-radius:5px;background:white}.piece.on{background:#79b6f2}.tip{padding:12px;border-left:5px solid var(--gold);background:#fffbed;border-radius:12px;margin:10px 0}.break{background:linear-gradient(135deg,#eaf8ee,#fff9df)}.coord{display:grid;grid-template-columns:repeat(9,1fr);aspect-ratio:1;border:2px solid #58718c;margin:12px auto;max-width:430px;background:repeating-linear-gradient(to right,transparent 0,transparent calc(11.111% - 1px),#d8e4f0 calc(11.111% - 1px),#d8e4f0 11.111%),repeating-linear-gradient(to bottom,transparent 0,transparent calc(11.111% - 1px),#d8e4f0 calc(11.111% - 1px),#d8e4f0 11.111%)}.passage{line-height:1.65;font-size:1.03rem;background:#fffdf4;border-left:5px solid var(--gold)}.passButtons{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.passButtons button{white-space:nowrap}.hidden{display:none!important}.sectionNav{display:flex;justify-content:space-between;gap:10px;margin-top:14px}.primary,.secondary,.success{border:0;border-radius:15px;padding:13px 16px;font-weight:900;min-height:48px}.primary{background:var(--blue);color:white}.secondary{background:white;color:var(--ink);border:1px solid var(--line)}.success{background:var(--green);color:white}.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:30}.bottomInner{max-width:760px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}.mastery{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.skill{border:1px solid var(--line);border-radius:14px;padding:9px 5px;text-align:center;font-size:.72rem;font-weight:800;background:#fff}.skill span{display:block;font-size:1.1rem}.tutor{background:#122033;color:#eef6ff}.tutor textarea{width:100%;min-height:110px;border:1px solid #435b76;border-radius:13px;background:#0c1827;color:white;padding:10px}.scoreGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.scoreBtn{border:1px solid #435b76;background:#0c1827;color:white;border-radius:13px;padding:11px}.scoreBtn.selected{background:#2469a9}.mini{font-size:.8rem;color:var(--muted)}@media(max-width:520px){main{padding:10px}.card{padding:15px;border-radius:18px}.choiceGrid{grid-template-columns:1fr}.agendaItem{grid-template-columns:38px 1fr auto}.mastery{grid-template-columns:repeat(2,1fr)}.card h2{font-size:1.22rem}.top{align-items:flex-start}.coord{max-width:94vw}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand"><h1>Cy's Skill Quest</h1><div>Lesson: Reboot + Fraction Foundations</div></div><div class="timer" id="timer">60:00</div></div></header>
+<main>
+<div class="progress"><span id="progressBar"></span></div>
+
+<section class="card page" data-title="Mission Brief">
+<div class="kicker">Welcome back</div><h2>Today's Mission</h2>
+<p class="directions">We are going to find a few skills to strengthen, practice fractions, build on the coordinate plane, and use a smart reading strategy. This is not one long test.</p>
+<div class="mastery">
+<div class="skill"><span>🧮</span>Number Sense</div><div class="skill"><span>🍕</span>Fractions</div><div class="skill"><span>🗺️</span>Coordinates</div><div class="skill"><span>📖</span>Reading</div>
+</div>
+<div class="agenda" style="margin-top:14px">
+<div class="agendaItem"><div class="icon">🔥</div><div><strong>Warm-up + progress</strong><small>Start with success</small></div><div class="time">5m</div></div>
+<div class="agendaItem"><div class="icon">🔎</div><div><strong>Skill check 1</strong><small>Short diagnostic burst</small></div><div class="time">8m</div></div>
+<div class="agendaItem"><div class="icon">🍕</div><div><strong>Fraction workshop</strong><small>Models, equivalence, addition</small></div><div class="time">12m</div></div>
+<div class="agendaItem"><div class="icon">🎮</div><div><strong>Brain break</strong><small>Fast visual challenge</small></div><div class="time">3m</div></div>
+<div class="agendaItem"><div class="icon">🔎</div><div><strong>Skill check 2</strong><small>Second short burst</small></div><div class="time">8m</div></div>
+<div class="agendaItem"><div class="icon">🗺️</div><div><strong>Coordinate build</strong><small>Create and decode a design</small></div><div class="time">12m</div></div>
+<div class="agendaItem"><div class="icon">📖</div><div><strong>Three-pass reading</strong><small>Read strategically</small></div><div class="time">8m</div></div>
+<div class="agendaItem"><div class="icon">🏁</div><div><strong>Exit ticket</strong><small>Show growth and choose next step</small></div><div class="time">4m</div></div>
+</div>
+</section>
+
+<section class="card page hidden" data-title="Warm-Up">
+<div class="kicker">0–5 minutes</div><h2>Warm-Up: Start Strong</h2>
+<div class="task"><b>1. Complete the pattern.</b><div class="math">12, 18, 24, 30, ___</div><input class="answer" data-key="warm1" inputmode="numeric"></div>
+<div class="task"><b>2. Which is larger?</b><div class="choiceGrid"><button class="choice" data-key="warm2" data-value="3/4">3/4</button><button class="choice" data-key="warm2" data-value="2/3">2/3</button></div></div>
+<div class="task"><b>3. Confidence check</b><div class="choiceGrid"><button class="choice" data-key="confidence" data-value="Ready">Ready</button><button class="choice" data-key="confidence" data-value="Mostly ready">Mostly ready</button><button class="choice" data-key="confidence" data-value="Need a warm-up">Need a warm-up</button><button class="choice" data-key="confidence" data-value="Not sure yet">Not sure yet</button></div></div>
+<div class="tip"><b>Tutor move:</b> Show Cy one strength from previous sessions: persistence with upgraded coordinate designs or success using the three-pass reading strategy.</div>
+</section>
+
+<section class="card page hidden" data-title="Skill Check 1">
+<div class="kicker">5–13 minutes</div><h2>Skill Check 1</h2><p class="directions">Six quick questions. Skip anything that feels stuck after a reasonable attempt.</p>
+<div class="task"><b>1. 7 × 8</b><input class="answer" data-key="a1" inputmode="numeric"></div>
+<div class="task"><b>2. 63 ÷ 9</b><input class="answer" data-key="a2" inputmode="numeric"></div>
+<div class="task"><b>3. 5,003 − 2,768</b><input class="answer" data-key="a3" inputmode="numeric"></div>
+<div class="task"><b>4. Complete: 3/4 = ?/20</b><input class="answer" data-key="a4" inputmode="numeric"></div>
+<div class="task"><b>5. Simplify 18/24</b><input class="answer" data-key="a5"></div>
+<div class="task"><b>6. 4.75 + 2.6</b><input class="answer" data-key="a6" inputmode="decimal"></div>
+</section>
+
+<section class="card page hidden" data-title="Fraction Workshop">
+<div class="kicker">13–25 minutes</div><h2>Fraction Workshop</h2>
+<div class="tip"><b>Big idea:</b> Fractions can only be added directly when the pieces are the same size.</div>
+<div class="task"><b>Model 3/8</b><p class="mini">Tap three boxes.</p><div class="model" id="modelA"></div></div>
+<div class="task"><b>Now add 2/8. How many eighths altogether?</b><input class="answer" data-key="f1" inputmode="numeric" placeholder="___ eighths"></div>
+<div class="task"><b>Equivalent fraction challenge</b><p>Complete: 1/2 = ?/8</p><div class="choiceGrid"><button class="choice" data-key="f2" data-value="2/8">2/8</button><button class="choice" data-key="f2" data-value="3/8">3/8</button><button class="choice" data-key="f2" data-value="4/8">4/8</button><button class="choice" data-key="f2" data-value="6/8">6/8</button></div></div>
+<div class="task"><b>Guided practice</b><p>1/4 + 2/4 =</p><input class="answer" data-key="f3"></div>
+<div class="task"><b>Upgrade: unlike denominators</b><p>1/2 + 1/4 =</p><textarea class="answer" data-key="f4" placeholder="Show how you make the pieces the same size."></textarea></div>
+<div class="task"><b>Explain it</b><p>Why is 1/3 + 1/4 not equal to 2/7?</p><textarea class="answer" data-key="f5"></textarea></div>
+</section>
+
+<section class="card page break hidden" data-title="Brain Break">
+<div class="kicker">25–28 minutes</div><h2>Brain Break: Odd One Out</h2><p class="directions">Choose the item that does not belong, then defend your answer. More than one answer can work.</p>
+<div class="choiceGrid"><button class="choice" data-key="break" data-value="Lego brick">🧱 Lego brick</button><button class="choice" data-key="break" data-value="Dice">🎲 Dice</button><button class="choice" data-key="break" data-value="Chessboard">♟️ Chessboard</button><button class="choice" data-key="break" data-value="Pizza">🍕 Pizza</button></div>
+<div class="task"><b>My reason:</b><textarea class="answer" data-key="breakReason"></textarea></div>
+</section>
+
+<section class="card page hidden" data-title="Skill Check 2">
+<div class="kicker">28–36 minutes</div><h2>Skill Check 2</h2><p class="directions">Another short burst. These questions sample different seventh-grade foundations.</p>
+<div class="task"><b>1. Which is greater: −3 or −8?</b><input class="answer" data-key="b1"></div>
+<div class="task"><b>2. −4 + 9</b><input class="answer" data-key="b2" inputmode="numeric"></div>
+<div class="task"><b>3. 6 + 3 × 4</b><input class="answer" data-key="b3" inputmode="numeric"></div>
+<div class="task"><b>4. Solve: x + 9 = 21</b><input class="answer" data-key="b4"></div>
+<div class="task"><b>5. Four notebooks cost $12. What do 7 cost?</b><input class="answer" data-key="b5" inputmode="decimal"></div>
+<div class="task"><b>6. Find 25% of 80.</b><input class="answer" data-key="b6" inputmode="numeric"></div>
+</section>
+
+<section class="card page hidden" data-title="Coordinate Build">
+<div class="kicker">36–48 minutes</div><h2>Coordinate Build: Pixel Beacon</h2><p class="directions">Plot or sketch these points on paper, then connect them in order. Predict the design before finishing.</p>
+<div class="task"><b>Point sequence</b><p>(−3, −2), (−3, 2), (−1, 4), (1, 4), (3, 2), (3, −2), (1, −2), (1, 1), (−1, 1), (−1, −2), back to (−3, −2)</p></div>
+<div class="coord" aria-label="Blank coordinate grid"></div>
+<div class="task"><b>What do you think the design resembles?</b><input class="answer" data-key="coord1"></div>
+<div class="task"><b>Choose one point and explain what each number tells you.</b><textarea class="answer" data-key="coord2"></textarea></div>
+<div class="task"><b>Upgrade the design</b><p>Add at least two points that create a new feature. Record them here.</p><textarea class="answer" data-key="coord3" placeholder="Example: (__, __), (__, __)"></textarea></div>
+</section>
+
+<section class="card page hidden" data-title="Strategic Reading">
+<div class="kicker">48–56 minutes</div><h2>Three-Pass Reading</h2>
+<div class="passButtons"><button class="secondary" onclick="showPass(1)">Pass 1: Topic sentences</button><button class="secondary" onclick="showPass(2)">Pass 2: Intro + conclusion</button><button class="secondary" onclick="showPass(3)">Pass 3: Full passage</button></div>
+<div class="task passage" id="readingText"></div>
+<div class="task"><b>After this pass, what is the passage mostly about?</b><textarea class="answer" data-key="read1"></textarea></div>
+<div class="task"><b>What detail helped you understand the math idea?</b><textarea class="answer" data-key="read2"></textarea></div>
+</section>
+
+<section class="card page hidden" data-title="Exit Ticket">
+<div class="kicker">56–60 minutes</div><h2>Exit Ticket</h2>
+<div class="task"><b>1. Solve: 1/2 + 1/4</b><input class="answer" data-key="exit1"></div>
+<div class="task"><b>2. What strategy helped most today?</b><div class="choiceGrid"><button class="choice" data-key="exit2" data-value="Drawing a model">Drawing a model</button><button class="choice" data-key="exit2" data-value="Finding equivalent fractions">Equivalent fractions</button><button class="choice" data-key="exit2" data-value="Writing steps">Writing steps</button><button class="choice" data-key="exit2" data-value="Explaining aloud">Explaining aloud</button></div></div>
+<div class="task"><b>3. What should we work on next?</b><textarea class="answer" data-key="exit3"></textarea></div>
+<div class="task"><b>How hard did your brain work?</b><div class="choiceGrid"><button class="choice" data-key="effort" data-value="1">1 — Easy</button><button class="choice" data-key="effort" data-value="2">2</button><button class="choice" data-key="effort" data-value="3">3</button><button class="choice" data-key="effort" data-value="4">4 — Strong workout</button></div></div>
+</section>
+
+<section class="card tutor page hidden" data-title="Tutor Review">
+<div class="kicker" style="color:#8bc2ff">Tutor only</div><h2>Review and Next-Step Notes</h2>
+<p>Skill Check 1 key: 56, 7, 2235, 15, 3/4, 7.35</p><p>Skill Check 2 key: −3, 5, 18, x=12, $21, 20</p><p>Exit ticket: 3/4</p>
+<div class="task" style="background:#0c1827;border-color:#435b76"><b>Overall evidence level</b><div class="scoreGrid"><button class="scoreBtn" data-key="tutorScore" data-value="Secure">Secure</button><button class="scoreBtn" data-key="tutorScore" data-value="Developing">Developing</button><button class="scoreBtn" data-key="tutorScore" data-value="Priority gap">Priority gap</button></div></div>
+<label>Strengths observed</label><textarea data-key="strengths"></textarea>
+<label>Priority gaps</label><textarea data-key="gaps"></textarea>
+<label>Confidence / persistence notes</label><textarea data-key="habits"></textarea>
+<label>Recommended next lesson</label><textarea data-key="nextLesson" placeholder="Suggested: equivalent fractions → unlike-denominator addition, with spaced multiplication review."></textarea>
+<button class="success" style="width:100%;margin-top:12px" onclick="copySummary()">Copy Lesson Summary</button>
+</section>
+</main>
+
+<div class="bottom"><div class="bottomInner"><button class="secondary" onclick="move(-1)">← Back</button><button class="primary" onclick="move(1)">Save & Next →</button></div></div>
+<script>
+const KEY='cyRebootFractionLessonV1';
+let state=JSON.parse(localStorage.getItem(KEY)||'{"page":0,"answers":{},"model":[]}');
+const pages=[...document.querySelectorAll('.page')];
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+function render(){pages.forEach((p,i)=>p.classList.toggle('hidden',i!==state.page));document.getElementById('progressBar').style.width=((state.page+1)/pages.length*100)+'%';window.scrollTo({top:0,behavior:'smooth'});save();}
+function move(n){state.page=Math.max(0,Math.min(pages.length-1,state.page+n));render();}
+document.querySelectorAll('[data-key]').forEach(el=>{
+ const k=el.dataset.key;
+ if(el.matches('input,textarea')){el.value=state.answers[k]||'';el.addEventListener('input',()=>{state.answers[k]=el.value;save();});}
+ else if(el.classList.contains('choice')||el.classList.contains('scoreBtn')){if(state.answers[k]===el.dataset.value)el.classList.add('selected');el.addEventListener('click',()=>{document.querySelectorAll(`[data-key="${k}"]`).forEach(x=>x.classList.remove('selected'));el.classList.add('selected');state.answers[k]=el.dataset.value;save();});}
+});
+const model=document.getElementById('modelA');for(let i=0;i<8;i++){let d=document.createElement('button');d.className='piece'+(state.model.includes(i)?' on':'');d.setAttribute('aria-label','fraction piece');d.onclick=()=>{d.classList.toggle('on');state.model=d.classList.contains('on')?[...new Set([...state.model,i])]:state.model.filter(x=>x!==i);save();};model.appendChild(d);}
+const para=[
+'The coordinate plane and fractions may seem unrelated, but both help mathematicians describe exact locations and amounts.',
+'On a coordinate plane, an ordered pair tells how far to travel horizontally and vertically. The first number controls the left-right movement, while the second controls the up-down movement. Fractions can make those locations even more precise. A point might be located at one-half or three-fourths of a unit instead of exactly on a whole number.',
+'This precision matters in design, engineering, and computer graphics. A game designer may place an object between grid lines, and an engineer may need a measurement smaller than one whole unit.',
+'Understanding fractions therefore makes coordinate work more powerful because it allows people to describe positions and measurements with greater accuracy.'
+];
+function showPass(n){let text;if(n===1)text=`<b>${para[0]}</b><br><br><b>${para[1].split('.')[0]}.</b><br><br><b>${para[2].split('.')[0]}.</b><br><br><b>${para[3]}</b>`;else if(n===2)text=`${para[0]}<br><br>${para[3]}`;else text=para.join('<br><br>');document.getElementById('readingText').innerHTML=text;}
+showPass(1);
+let remaining=3600;let running=false;const timer=document.getElementById('timer');timer.onclick=()=>running=!running;setInterval(()=>{if(!running||remaining<=0)return;remaining--;let m=Math.floor(remaining/60),s=remaining%60;timer.textContent=`${m}:${String(s).padStart(2,'0')}`;},1000);
+function copySummary(){const a=state.answers;const text=`Cy Lesson Summary\n\nEvidence level: ${a.tutorScore||'Not scored'}\nStrengths: ${a.strengths||''}\nPriority gaps: ${a.gaps||''}\nConfidence/persistence: ${a.habits||''}\nRecommended next lesson: ${a.nextLesson||''}\n\nStudent reflection: ${a.exit3||''}\nEffort: ${a.effort||''}/4`;navigator.clipboard.writeText(text).then(()=>alert('Summary copied.'));}
+render();
+</script>
+</body>
+</html>
